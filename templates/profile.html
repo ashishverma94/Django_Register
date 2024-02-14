@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/static/css/home.css'%}">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1> USER PROFILE</h1>
+        <div class="user-info">
+            <h2>Name :<span style="color: rgb(5, 21, 196);">{{user.username}}</span> </h2>
+            <h2>Email:<span style="color: rgb(5, 21, 196);">{{user.email}}</span> </h2>
+        </div>
+            <a href="{% url 'logout' %}" class="btn btn-primary"><span class="out-link">Logout</span></a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Design by foolishdeveloper.com -->
+    <title>Signup</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/static/css/signup.css'%}">
+  
+ 
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="container">
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3>SIGN IN</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter Username" name="username" id="username">
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter email" name="email" id="email">
+
+        <label for="password1">Password</label>
+        <input type="password" placeholder="Enter Password" id="password1" name="password1">
+
+
+        <label for="password2">Confirm Password</label>
+        <input type="password" placeholder="Enter Password" id="password2" name="password2">
+        <button type="submit">Signup</button>
+        <div class="bottom-div">
+            Account already exist <a href="{% url 'login' %}">Login</a>
+        <p style="color: red;">{{error}}</p>
+        </div>
+        
+    </form>
+</div>
+
+</body>
+
+</html>
